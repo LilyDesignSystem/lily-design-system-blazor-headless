@@ -1,11 +1,11 @@
 @namespace LilyBlazorHeadless.Components
 
 @*
-    Comment component
-    a comment is anything that expresses an opinion, observation, explanation, etc.
+    AddressographBox component
+    a labeled stamp-style block that identifies a patient or record with name, date of birth, and identifier.
 *@
 
-<div class="@($"comment {CssClass}".Trim())" aria-label="@Label" @attributes="AdditionalAttributes">@ChildContent</div>
+<div class="@($"addressograph-box {CssClass}".Trim())" aria-label="@Label" @attributes="AdditionalAttributes">@ChildContent</div>
 
 @code {
     [Parameter] public string Label { get; set; } = "";

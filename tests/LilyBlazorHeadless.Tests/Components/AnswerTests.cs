@@ -4,34 +4,34 @@ using Xunit;
 
 namespace LilyBlazorHeadless.Tests.Components;
 
-public class QrCodeTests : TestContext
+public class AnswerTests : TestContext
 {
     [Fact]
     public void Renders_with_kebab_base_class()
     {
-        var cut = RenderComponent<QrCode>(p => p
+        var cut = RenderComponent<Answer>(p => p
             .AddChildContent("body"));
-        var root = cut.Find(".qr-code");
+        var root = cut.Find(".answer");
         Assert.NotNull(root);
     }
 
     [Fact]
     public void CssClass_is_appended_to_kebab_base_class()
     {
-        var cut = RenderComponent<QrCode>(p => p
+        var cut = RenderComponent<Answer>(p => p
             .AddChildContent("body")
             .Add(x => x.CssClass, "extra"));
-        var root = cut.Find(".qr-code");
+        var root = cut.Find(".answer");
         Assert.Contains("extra", root.GetAttribute("class"));
     }
 
     [Fact]
     public void AdditionalAttributes_pass_through_to_root()
     {
-        var cut = RenderComponent<QrCode>(p => p
+        var cut = RenderComponent<Answer>(p => p
             .AddChildContent("body")
             .AddUnmatched("data-test", "value"));
-        var root = cut.Find(".qr-code");
+        var root = cut.Find(".answer");
         Assert.Equal("value", root.GetAttribute("data-test"));
     }
 }

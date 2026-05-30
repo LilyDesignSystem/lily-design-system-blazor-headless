@@ -1,11 +1,11 @@
 @namespace LilyBlazorHeadless.Components
 
 @*
-    Comment component
-    a comment is anything that expresses an opinion, observation, explanation, etc.
+    Question component
+    a question is anything that asks for information, invites a response, tests knowledge, etc.
 *@
 
-<div class="@($"comment {CssClass}".Trim())" aria-label="@Label" @attributes="AdditionalAttributes">@ChildContent</div>
+<div class="@($"question {CssClass}".Trim())" aria-label="@Label" @attributes="AdditionalAttributes">@ChildContent</div>
 
 @code {
     [Parameter] public string Label { get; set; } = "";
