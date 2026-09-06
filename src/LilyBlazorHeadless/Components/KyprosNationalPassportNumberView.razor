@@ -1,11 +1,11 @@
 @namespace LilyBlazorHeadless.Components
 
 @*
-    IrelandIndividualHealthIdentifierView component
-    a read-only display of Ireland Individual Health Identifier (IHI) unique national healthcare identifier
+    KyprosNationalPassportNumberView component
+    a read-only display of Kypros's National Passport Number
 *@
 
-<span class="@($"ireland-individual-health-identifier-view {CssClass}".Trim())" aria-label="@Label" @attributes="AdditionalAttributes">@ChildContent</span>
+<span class="@($"kypros-national-passport-number-view {CssClass}".Trim())" aria-label="@Label" @attributes="AdditionalAttributes">@ChildContent</span>
 
 @code {
     [Parameter, EditorRequired] public string Label { get; set; } = "";

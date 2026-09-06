@@ -1,11 +1,11 @@
 @namespace LilyBlazorHeadless.Components
 
 @*
-    CyprusNationalPassportNumberInput component
-    an input for entering Cyprus's National Passport Number
+    KyprosNationalPassportNumberInput component
+    an input for entering Kypros's National Passport Number
 *@
 
-<input class="@($"cyprus-national-passport-number-input {CssClass}".Trim())" type="text" aria-label="@Label" autocomplete="off" @attributes="AdditionalAttributes" />
+<input class="@($"kypros-national-passport-number-input {CssClass}".Trim())" type="text" aria-label="@Label" autocomplete="off" @attributes="AdditionalAttributes" />
 
 @code {
     [Parameter, EditorRequired] public string Label { get; set; } = "";
